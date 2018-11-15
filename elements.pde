@@ -1,7 +1,9 @@
 class Element{
   float x, y;
-  float size = random(1,10);
+  float r = random(0.1,5);
+  float alpha = random(0,20);
   color col = color(200,50,80);
+  boolean isDisplayed = false;
   
     Element(float x_, float y_){
       x = x_;
@@ -10,7 +12,7 @@ class Element{
     
     void display(){
       noStroke();
-      fill(col, 20);
-      ellipse(x, y, size, size);
+      fill(col, alpha);
+      ellipse(x, y, r, r);
     }
 }
